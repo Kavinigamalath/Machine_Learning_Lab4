@@ -1,0 +1,26 @@
+Excersice 01
+
+01. Qusestion: Make the alpha values smaller and larger and see how the learning rate and the theta values change. Can you explain the reasons for the changes in the output?
+
+Answer:
+
+Too large alpha can overshoot and fail to converge, causing J to increase.
+Explanation: Decreasing alpha makes each update step smaller, so theta changes slowly and you may need more iterations to reach a low cost. Increasing alpha makes larger steps, which can speed convergence at first but may overshoot the minimum and cause the cost to oscillate or diverge, producing unstable theta.
+
+02. Qusestion:Can you explain the reasons for the changes in the output?
+
+Explanation: The gradient descent and normal equation predictions should be very close because both solve the same linear regression objective. Small differences come from iterative convergence in gradient descent (alpha and num_iters) versus the exact closed-form solution from the normal equation.
+
+Excersice 02
+
+Task 1 observations: 
+
+With encoding/scaling, the model uses categorical signals and numerical features contribute on comparable scales. This usually improves R-squared and lowers MSE compared to using only raw numeric columns.
+
+Advantage: encoding makes categories usable; scaling prevents large-magnitude features from dominating and helps regularization behave consistently.
+
+Task 2 observations: 
+
+As alpha - 0, Ridge matches ordinary least squares, so MSE and R-squared are nearly the same. As alpha grows large, coefficients shrink toward 0, predictions become less responsive to features, MSE rises and R-squared drops (underfitting). A moderate alpha can slightly improve test performance by reducing variance and sensitivity to correlated features.
+
+Advantage of regularization: it discourages overly large coefficients, reduces overfitting, and makes the model more stable when predictors are correlated or noisy.
